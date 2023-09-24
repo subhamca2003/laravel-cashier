@@ -15,8 +15,7 @@ class PaymentController extends Controller
 
     public function createPaymentIntent(Request $request)
     {
-        $amount = $request->input('amount');
-        $intent = $this->paymentService->createPaymentIntent($amount);
+        $intent = $this->paymentService->charge($request);
 
         return response()->json(['client_secret' => $intent->client_secret]);
     }

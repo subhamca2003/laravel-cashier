@@ -16,7 +16,7 @@
                     <h5 class="card-title">Product 1</h5>
                     <p class="card-text">Description of Product 1.</p>
                     <p class="card-text"><strong>Price: $19.99</strong></p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <a href="{{ route('buy.product', 1) }}" class="btn btn-primary">Add to Cart</a>
                 </div>
             </div>
         </div>
