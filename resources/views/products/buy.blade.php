@@ -13,13 +13,14 @@
                 </div>
                 <!-- Product Details -->
                 <div class="col-md-6">
-                    <h2>Product Name</h2>
-                    <p>Description of the product goes here. You can provide detailed information about the product.</p>
-                    <h3>Price: $19.99</h3>
+                    <h2>{{ $product->name }}</h2>
+                    <p>{{ $product->description }}</p>
+                    <h3>Price: ${{ $product->price }}</h3>
                     <!-- Credit Card Form -->
                     <div class="mt-4">
                         <h4>Enter Your Payment Information</h4>
                         <form>
+                            <input type="hidden" id="id" value="{{ $product->id }}"/>
                             <!-- Card Number -->
                             <div class="form-group">
                                 <label for="cardNumber">Card Number</label>
