@@ -27,8 +27,8 @@
                         <h4>Enter Your Payment Information</h4>
                         <form action="{{ route('process-checkout') }}" method="POST">
                             @csrf
-                            <input type="text" name="product_name" placeholder="Product Name" value="{{ $product->name }}">
-                            <input type="number" name="amount" placeholder="Amount" value="{{ $product->price }}">
+                            <input type="hidden" name="product_name" placeholder="Product Name" value="{{ $product->name }}">
+                            <input type="hidden" name="amount" placeholder="Amount" value="{{ $product->price }}">
                             <input type="hidden" id="id" value="{{ $product->id }}"/>
                             <!-- Card Number -->
                             <div class="form-group">
