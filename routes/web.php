@@ -27,6 +27,7 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 //Route::get('/', [ProductController::class, 'index']);
+Route::get('/product-list', [ProductController::class, 'index'])->name('product-list');
 Route::get('/buy/{product}', [ProductController::class, 'buy'])->name('buy.product');
 Route::post('/create-payment-intent', [PaymentController::class, 'createPaymentIntent']);
 
@@ -38,4 +39,7 @@ Route::post('/process-checkout', [CheckoutController::class, 'processCheckout'])
 Route::get('/checkout-success', function () {
     return view('checkout.checkout-success');
 })->name('checkout-success');
+Route::get('/checkout-failure', function () {
+    return view('checkout.checkout-failure');
+})->name('checkout-failure');
 
